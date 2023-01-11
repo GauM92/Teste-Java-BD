@@ -1,0 +1,8 @@
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','20111992');
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','20-11-1992');
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','2011-11-02');
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','20/11/1992');
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','2011/11/12');
+INSERT INTO tb_pessoa(nome, dataDeNascimento) VALUES ('Gabriel','teste')
+
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade) VALUES ('Gabriel',00000,56,'sao');

@@ -1,0 +1,38 @@
+package com.h2pessoa.banco.controllers;
+
+import java.awt.print.Pageable;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.h2pessoa.banco.entitites.Pessoa;
+import com.h2pessoa.banco.repositories.PessoaRepository;
+
+@RestController
+@RequestMapping(value= "/pessoas")
+public class PessoaController {
+	
+	@Autowired
+	private PessoaRepository repository;
+	
+	@GetMapping
+	public List<Pessoa> findAll(){
+		List<Pessoa>result = repository.findAll();
+		return result;
+	}
+
+	@GetMapping	(value="/procurar-pessoa")
+	public ResponseEntity<Page<Pessoa>> searchByName(
+			@RequestParam(defaultValue = "") String name,
+			Pageable pageable) {
+		Page<Pessoa> result= repository.searchName(name,pageable);
+		return ResponseEntity.ok(result);
+	}
+	
+}

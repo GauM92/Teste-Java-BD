@@ -1,0 +1,5 @@
+package com.h2pessoa.banco.entitites;
+
+public class Endereco {
+
+}

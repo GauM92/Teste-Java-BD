@@ -1,0 +1,16 @@
+package com.h2pessoa.banco.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.h2pessoa.banco.entitites.Pessoa;
+
+public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
+
+	Object toString(String nome);
+
+
+	
+	
+	
+	
+}

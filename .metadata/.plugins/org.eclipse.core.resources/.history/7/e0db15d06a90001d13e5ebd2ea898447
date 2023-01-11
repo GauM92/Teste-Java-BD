@@ -1,0 +1,32 @@
+package com.h2pessoa.banco.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.h2pessoa.banco.entitites.Endereco;
+import com.h2pessoa.banco.repositories.EnderecosRepository;
+
+@RequestMapping("/enderecos")
+public class EnderecosController {
+	
+	@Autowired
+	private EnderecosRepository endrepository;
+	
+	@GetMapping
+		List<Endereco>result = endrepository.findAll();
+		return result;
+	}
+	
+	@GetMapping(value="/{id}")
+	public Endereco findById(@PathVariable Long id) {
+		Endereco result =endrepository.findById(id).get();
+		return result;
+	} 
+	
+	
+
+}

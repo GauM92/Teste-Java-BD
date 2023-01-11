@@ -1,0 +1,19 @@
+package com.h2pessoa.banco.repositories;
+
+import java.awt.print.Pageable;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.h2pessoa.banco.entitites.Pessoa;
+
+public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
+
+	@Query("SELECT obj FORM User obj WHERE LOWER(obj.nome) LIKE LOWER (CONCAT('%',:nome,'%'))")
+	Page<Pessoa> searchNome(String name, Pageable pageable);
+
+	
+	
+	
+}

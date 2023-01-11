@@ -1,0 +1,1 @@
+INSERT INTO tb_pessoa(nome,dataNascimento) VALUES ('Gabriel','20111992')

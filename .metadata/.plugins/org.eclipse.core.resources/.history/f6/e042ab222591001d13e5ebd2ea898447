@@ -1,0 +1,18 @@
+
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Gabriel','20/11/1992');
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Rafael','20/11/2002');
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Gabriela','11/12/2010');
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Sabrina','12/11/1993')
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Lia','19/06/2000');
+INSERT INTO tb_pessoa(nome, data_De_Nascimento) VALUES ('Samira','25/02/1993')
+
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('rua nacional',00000122, 6,'São Paulo','1');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Av. Brasil',00000123, 5,'São Paulo','4');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Rua Um',00012345, 53,'São Paulo','6');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Alameda Brasil',00123457, 16,'São Paulo','2');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,, enderecoprincipal) VALUES ('Rua Segunda',00123456, 55,'São Paulo','1',SIM);
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Rua Dois',12345677, 156,'São Paulo','4');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Rua Major',12345678, 1156,'São Paulo','1');
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome,enderecoprincipal) VALUES ('Rua Sargento',078945612, 256,'São Paulo','3',SIM);
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome,enderecoprincipal) VALUES ('Rua Estados Unidos', 01234567, 4,'São Paulo','5',SIM);
+INSERT INTO tb_enderecos(logadouro, cep, numero, cidade,id_nome) VALUES ('Rua São Paulo', 12345687, 1,'São Paulo','6');
